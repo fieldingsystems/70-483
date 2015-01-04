@@ -11,7 +11,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             // Hello World Console app
-            Console.WriteLine("Hello World");
+            Console.WriteLine("Hello Kelsi 'Sugga Titz' Trahan");
             Console.ReadKey();
         }
     }
