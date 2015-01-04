@@ -10,8 +10,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Hello World Console app
-            Console.WriteLine("Hello Kelsi 'Sugga Titz' Trahan");
+            // Hello World Console app this is just to build the local repository
+            Console.WriteLine("Hello World");
             Console.ReadKey();
         }
     }
