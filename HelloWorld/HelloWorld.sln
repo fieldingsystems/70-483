@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{BDD61A58-59BF-46D3-9097-E82B5DD5914C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastingBetweenTypes", "Type Fundamentals\CastingBetweenTypes\CastingBetweenTypes.csproj", "{1AF548F0-5E84-4470-9FA1-2B369987F10A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BDD61A58-59BF-46D3-9097-E82B5DD5914C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD61A58-59BF-46D3-9097-E82B5DD5914C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD61A58-59BF-46D3-9097-E82B5DD5914C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF548F0-5E84-4470-9FA1-2B369987F10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF548F0-5E84-4470-9FA1-2B369987F10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF548F0-5E84-4470-9FA1-2B369987F10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF548F0-5E84-4470-9FA1-2B369987F10A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
