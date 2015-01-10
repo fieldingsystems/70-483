@@ -12,6 +12,12 @@ namespace CastingBetweenTypes
         // ... some implementation
     }
 
+    // class derived from employee
+    internal class Manager : Employee
+    {
+        // ... some implementation
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +27,38 @@ namespace CastingBetweenTypes
             Console.WriteLine("first example ran successfully, press any key to continue...");
             Console.ReadKey();
 
+            // second example this will compilet but 
+            // at run time CLR check casting operations to ensure that cast
+            // are always to the objects actual type or any of its base types
+            // this should throw an InvalidCastException
+            SecondExample();
+            Console.WriteLine("you shouldn't see this");
+            Console.ReadKey();
+        }
 
+        private static void SecondExample()
+        {
+            // construct a mander object and pass it to PromoteEmployee
+            // A Manager IS-A Employee: Promote Employee runs OK
+            Manager m = new Manager();
+            PromoteEmployee(m);
+            Console.WriteLine("manager Promoted, press any key to continue...");
+            Console.ReadKey();
+
+            // construct a datetime object and pass it to PromoteEmployee
+            // a datetime is now derived rom employee. PromoteEmployee
+            // throws a System.InvalidCastException excetion.
+            DateTime newYears = new DateTime(2015, 1, 1);
+            PromoteEmployee(newYears);
+        }
+
+        // at this point the compiler doesn't knwo exactly what type of object o refers
+        // to. So the compiler allows the code to comiple. However, at run time, the CLR
+        // knows wat type o refers to each time the cast is preformed and it checks
+        // if the object is type Employee or a derived type.
+        private static void PromoteEmployee(Object o)
+        {
+            Employee e = (Employee) o;
         }
 
         private static void FirstExample()
