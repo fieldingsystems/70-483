@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CastingBetweenTypes
 {
-    // new type implicityly derived from System.Object
+    // new type implicitly derived from System.Object
     internal class Employee 
     {
         // ... some implementation
     }
 
-    // class derived from employee
+    // class derived from employee explicitly
     internal class Manager : Employee
     {
         // ... some implementation
@@ -27,7 +27,7 @@ namespace CastingBetweenTypes
             Console.WriteLine("first example ran successfully, press any key to continue...");
             Console.ReadKey();
 
-            // second example this will compilet but 
+            // second example this will compile but 
             // at run time CLR check casting operations to ensure that cast
             // are always to the objects actual type or any of its base types
             // this should throw an InvalidCastException
@@ -52,7 +52,7 @@ namespace CastingBetweenTypes
             PromoteEmployee(newYears);
         }
 
-        // at this point the compiler doesn't knwo exactly what type of object o refers
+        // at this point the compiler doesn't know exactly what type of object o refers
         // to. So the compiler allows the code to comiple. However, at run time, the CLR
         // knows wat type o refers to each time the cast is preformed and it checks
         // if the object is type Employee or a derived type.
