@@ -12,9 +12,42 @@ namespace IntExampleSyntax
         {
             PrimativeDemo1();
             PrimativeDemo2();
+            PrimativeDemo3();
 
             Console.WriteLine("press any key to continue...");
             Console.ReadKey();
+        }
+
+        // this example focuses on primitive types that can be written as literals. A literal is 
+        // considered to be and instance of the type itself and therefore you can call instance methods
+        // by using the instance as whown below. Also if you have an expression consisting of literals, the 
+        // compiler is able to evaluate the expression at compile time (including order of operations,
+        // improving the application's preformance.
+        private static void PrimativeDemo3()
+        {
+            Console.WriteLine("Primative Demo 3");
+
+            // "123456"
+            Console.WriteLine(123.ToString() + 456.ToString());
+
+            Boolean found = false; // Generated code sets found to 0
+            Int32 x = 100 + 20 + 3; // generated code sets x 123
+            String s = "a " + "bc"; // generated code sets s to "a bc"
+            
+            Console.WriteLine(found);
+            Console.WriteLine(x);
+            Console.WriteLine(s);
+
+            Int32 y = 100; // assignment operator
+            Int32 z = x + 23; // addition and assignment operator
+            Boolean less = y < 50; // less than and assignment operator
+
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+            Console.WriteLine(less);
+
+
+            Console.WriteLine();
         }
 
         // this next example is a little ugly but its to show how the compiler has
