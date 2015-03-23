@@ -3,5 +3,3 @@
 
 This is for preparation of the C# exam 70-483
 
-Best of Luck,
-Alex
