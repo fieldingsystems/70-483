@@ -43,6 +43,9 @@ namespace BoxingAndUnboxingValueTypes
         /// this is follwed by a field copy, followed by changing the field on the stack, followed by a boxing operation
         /// (which creates a whole new boxed instance in the managed heap). the impact that boxing and unboxing have in
         /// C# can be detrimintal to preformance.
+        /// 
+        /// another note is unboxed value types don't have a sync block index, this means you can't have
+        /// multiple threads synchronize thier access tot he instance or with lock statements
         /// </summary>
         private static void UnboxingDemo3()
         {
