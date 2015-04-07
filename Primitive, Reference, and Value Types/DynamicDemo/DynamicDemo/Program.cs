@@ -45,8 +45,6 @@ namespace DynamicDemo
                 value = value+value; // its important to realize this does both add and concat depending on type
                 Print(value);
             }
-        }
-
-        
+        } 
     }
 }
