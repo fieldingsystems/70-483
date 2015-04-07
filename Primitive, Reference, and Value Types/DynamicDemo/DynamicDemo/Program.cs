@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,8 +20,38 @@ namespace DynamicDemo
             // first demo using dynamic objects
             DynamicDemo();
 
+            // second demo showing how dynamic sytax can make life easier
+            DynamicDemo2();
+
             Console.WriteLine("\n\nPress any key to continue");
             Console.ReadKey();
+        }
+
+        /// <summary>
+        /// the point of this is jsut to show how the two segments of code do the same thing but
+        /// one is much easier to read and write than the other. The first uses reflection the
+        /// second uses dynamic types
+        /// </summary>
+        private static void DynamicDemo2()
+        {
+            // firtst the long way without dynamic object
+            Object target = "Alex Compton";
+            Object arg = "Comp";
+
+            // find a method on the target that matches the desired argument types
+            Type[] argTypes = new Type[] { arg.GetType() };
+            MethodInfo method = target.GetType().GetMethod("Contains", argTypes);
+
+            // invoke the method on the target passing the desired arguments
+            Object[] arguments = new Object[] { arg };
+            Boolean result = Convert.ToBoolean(method.Invoke(target, arguments));
+            Console.WriteLine("\n1st example: " + result);
+
+            // I know the code above really was ugly the code below does the same thing with improved syntax
+            dynamic dynamicTarget = "Alex Compton";
+            dynamic dynamicArg = "Comp";
+            Boolean result2 = dynamicTarget.Contains(dynamicArg);
+            Console.WriteLine("2nd example: " + result2);
         }
 
         /// <summary>
