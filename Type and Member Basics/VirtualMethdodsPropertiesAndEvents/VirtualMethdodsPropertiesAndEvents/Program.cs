@@ -49,6 +49,12 @@ namespace VirtualMethdodsPropertiesAndEvents
             e = new SlackerEmployee();
             Console.WriteLine(e.GetProgressReport());
 
+            // the code below should be commented out if you want this to run correctly, this is just to show the 
+            // difference between C# and some other languages, this would run just fine and return 5 but for c# it 
+            // throws a NullReferenceException
+            e = null;
+            Console.WriteLine(e.GetYearsEmployed());
+
             Console.WriteLine("\nPress any key to continue");
             Console.ReadKey();
         }
