@@ -51,6 +51,11 @@ namespace ConversionOperatorOverload
             return new Rational(num);
         }
 
+        // NOTE:
+        // notice anything differnt from the next two methods
+        // they differ only by thier return type... (Didn't think
+        // you could do that.)
+
         // explicitly returns and Int32 from a rational
         public static explicit operator Int32(Rational r)
         {
