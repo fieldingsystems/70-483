@@ -9,7 +9,9 @@ namespace ConversionOperatorOverload
     /// <summary>
     /// this class has overloaded the conversion methods for a rational number to various 
     /// other primative types the implementation is left out but this should be enough for
-    /// you to figure out how this works
+    /// you to figure out how this works. also in this case the implicit cast might 
+    /// loose some presicion or magnitude, these should through an Overflow exception or
+    /// invalidOperation exception
     /// </summary>
     class Rational
     {
