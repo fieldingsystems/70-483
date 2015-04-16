@@ -62,11 +62,22 @@ namespace ConversionOperatorOverload
         }
     }
 
+    /// <summary>
+    /// the code above alows you write the following code. nothing
+    /// intersting will happend but it compiles
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            Rational r1 = 5; // implicit cast from int32 to rational
+            Rational r2 = "2.343"; // implicit cast from a string to rational
+
+            Int32 x = (Int32)r1; // explicit cast from rational to Int32
+            String s = (String)r2; // explicit cast from rational to string
+
+            Console.WriteLine("press any key to continue...");
+            Console.ReadKey();
         }
     }
 }
