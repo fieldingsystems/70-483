@@ -95,6 +95,10 @@ namespace ExtensionMethods
             Action<Object> action2 = o2 => Console.WriteLine(numberList[5]);
             action2.InvokeAndCatch<ArgumentOutOfRangeException>(null);
 
+            // last example involving extention methods involve invoking delegates
+            Action a = " Alex".ShowItems;
+            a();            
+
             Console.WriteLine("\n\npress any key to continue...");
             Console.ReadKey();
         }
